@@ -28,6 +28,7 @@ int main()
     int min = 0;
     int max = 100;
 
+    //This grabs the middle number.
     void mid(int min, int max);
     {
         (min + max) / 2;
