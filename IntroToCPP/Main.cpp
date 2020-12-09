@@ -2,62 +2,66 @@
 
 int main()
 {
-    char answer;
-    int num;
-    int min;
-    int max;
 
-    std::cout << "Pick a number between one and one hundred" << std::endl;
+    std::cout << "Pick a number between one and ten" << std::endl;
 
     system("pause");
 
-    std::cout << "Rules: Answer all questions with either Y for yes or N for no!" << std::endl;
+	std::cout << "Rules: Answer all questions with the number that is displayed!" << std::endl;
 
-
-    std::cout << "You must also answer G for greater than or L for less than!" << std::endl;
-
+	std::cout << " " << std::endl;
 
     std::cout << "Remember that number and DO NOT CHANGE IT!" << std::endl;
 
     system("pause");
     system("CLS");
 
-    std::cout << "Now, Let's get started! Is your number 50?" << std::endl;
+    int length = 10;
+    int min = 1;
+    int max = 10;
 
-    int num = 50;
-    int min = 0;
-    int max = 100;
+	while (min <= max)
+	{
+		int num = 0;
+		int higher = 1;
+		bool lower = 2;
+		bool correct = 3;
+		int guess = (min + max) / 2;
 
-    //This grabs the middle number.
-    void mid(int min, int max);
-    {
-        (min + max) / 2;
-    }
+		std::cout << "Is this your number? " << guess << std::endl;
 
-    std::cin >> answer;
+		std::cout << "1. Higher" << std::endl;
+		std::cout << "2. Lower" << std::endl;
+		std::cout << "3. Correct" << std::endl;
 
-    if (answer != 'Y' && answer != 'N' && answer != 'G' && answer != 'L')
-    {
-        if (answer == 'Y')
-        {
-            std::cout << "Your number is " << num << "!" << std::endl;
 
-            system("pause");
 
-            return 1;
-        }
+		std::cin >> num;
 
-        else if (answer == 'N')
-        {
-            std::cout << "Is the number greater or less than 50?" << std::endl;
 
-            system("pause");
+		if (num == 1)
+		{
+			if (min == max)
+			{
+				std::cout << "You cheated, remember not to change your number!" << std::endl;
+			}
+			min = guess + 1;
 
-            if (answer == 'G')
-            {
-                mid(51, 100);
-            }
-        }
+		}
+		else if (num == 2)
+		{
+			if (min == max)
+			{
+				std::cout << "You cheated, remember not to change your number!" << std::endl;
+			}
+			max = guess - 1;
+
+		}
+		else if (num == 3)
+		{
+			std::cout << "Told You I would get it" << std::endl;
+			break;
+		}
 
     }
     
