@@ -66,24 +66,28 @@ int main()
             {
                 std::cout << nameOne << " Wins!" << std::endl;
                 checkPlayer1Win = true;
+                return 1;
             }
 
             if (grid[0][i] == 'X' && grid[1][i] == 'X' && grid[2][i] == 'X')
             {
                 std::cout << nameOne << " Wins!" << std::endl;
                 checkPlayer1Win = true;
+                return 1;
             }
 
             if (grid[i][0] == 'O' && grid[i][1] == 'O' && grid[i][2] == 'O')
             {
                 std::cout << nameTwo << " Wins!" << std::endl;
                 checkPlayer2Win = true;
+                return 1;
             }
 
             if (grid[0][i] == 'O' && grid[1][i] == 'O' && grid[2][i] == 'O')
             {
                 std::cout << nameTwo << " Wins!" << std::endl;
                 checkPlayer2Win = true;
+                return 1;
             }
         }
 
@@ -91,22 +95,26 @@ int main()
         {
             std::cout << nameOne << " Wins!" << std::endl;
             checkPlayer1Win = true;
+            return 1;
         }
         if (grid[0][2] == 'X' && grid[1][1] == 'X' && grid[2][0] == 'X')
         {
             std::cout << nameOne << " Wins!" << std::endl;
             checkPlayer1Win = true;
+            return 1;
         }
 
         if (grid[0][0] == 'O' && grid[1][1] == 'O' && grid[2][2] == 'X')
         {
             std::cout << nameTwo << " Wins!" << std::endl;
             checkPlayer2Win = true;
+            return 1;
         }
         if (grid[0][2] == 'O' && grid[1][1] == 'O' && grid[2][0] == 'X')
         {
             std::cout << nameTwo << " Wins!" << std::endl;
             checkPlayer2Win = true;
+            return 1;
         }
 
         std::cout << grid[0][0] << "   " << grid[1][0] << "   " << grid[2][0] << std::endl << std::endl;
