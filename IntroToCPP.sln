@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TicTacToe", "TicTacToe\TicT
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pointers", "Pointers\Pointers.vcxproj", "{6F520341-42EE-449C-BE0A-C678AC29388B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FileIO", "FileIO\FileIO.vcxproj", "{B51BBE41-1743-4723-BFF5-78D1B3A36FB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{6F520341-42EE-449C-BE0A-C678AC29388B}.Release|x64.Build.0 = Release|x64
 		{6F520341-42EE-449C-BE0A-C678AC29388B}.Release|x86.ActiveCfg = Release|Win32
 		{6F520341-42EE-449C-BE0A-C678AC29388B}.Release|x86.Build.0 = Release|Win32
+		{B51BBE41-1743-4723-BFF5-78D1B3A36FB9}.Debug|x64.ActiveCfg = Debug|x64
+		{B51BBE41-1743-4723-BFF5-78D1B3A36FB9}.Debug|x64.Build.0 = Debug|x64
+		{B51BBE41-1743-4723-BFF5-78D1B3A36FB9}.Debug|x86.ActiveCfg = Debug|Win32
+		{B51BBE41-1743-4723-BFF5-78D1B3A36FB9}.Debug|x86.Build.0 = Debug|Win32
+		{B51BBE41-1743-4723-BFF5-78D1B3A36FB9}.Release|x64.ActiveCfg = Release|x64
+		{B51BBE41-1743-4723-BFF5-78D1B3A36FB9}.Release|x64.Build.0 = Release|x64
+		{B51BBE41-1743-4723-BFF5-78D1B3A36FB9}.Release|x86.ActiveCfg = Release|Win32
+		{B51BBE41-1743-4723-BFF5-78D1B3A36FB9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
