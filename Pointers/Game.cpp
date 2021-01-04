@@ -78,8 +78,9 @@ void Game::start()
         }
 
         //Reads the player stats from the text file.
-        file >> m_player1->getHealth();
-        file >> m_player1->getDamage();
+        //I know i'm pointing at health but i'm figuring it out now..
+        file << m_player1->getHealth();
+        file << m_player1->getDamage();
 
         //Closes the file once we're done.
         file.close();
