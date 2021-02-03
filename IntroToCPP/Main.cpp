@@ -29,6 +29,7 @@ int main()
 		int higher = 1;
 		bool lower = 2;
 		bool correct = 3;
+		//Adds a guess that does the math of checking which number was picked
 		int guess = (min + max) / 2;
 
 		//Displays a number on screen
