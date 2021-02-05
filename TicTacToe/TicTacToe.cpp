@@ -121,6 +121,7 @@ int main()
         std::cout << grid[0][1] << "   " << grid[1][1] << "   " << grid[2][1] << std::endl << std::endl;
         std::cout << grid[0][2] << "   " << grid[1][2] << "   " << grid[2][2] << std::endl;
 
+
         std::cout << "Player One, pick a number to set your position!" << std::endl;
 
         std::cin >> position;
@@ -135,7 +136,17 @@ int main()
             playerSymbol = 'X';
         }
 
+        if (position = 'O' || 'X')
+        {
+            std::cout << "Pick a new spot!" << std::endl;
+        }
+
         std::cout << "Player " << playerSymbol << ", pick a number to set your position!" << std::endl;
+
+        if (position = 'O' || 'X')
+        {
+            std::cout << "Pick a new spot!" << std::endl;
+        }
 
         if (position == 1)
         {
