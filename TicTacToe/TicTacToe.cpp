@@ -15,9 +15,11 @@ int main()
 
     ///This is an array that holds characters to create a name for player one
     char nameOne[15];
+    ///This is the playersSymbol
     char playerSymbol;
     ///This should check if player one wins
     bool checkPlayer1Win = false;
+    ///This is the position where the player can put their token
     int position;
 
     std::cout << "Player One Name:" << std::endl;
@@ -60,8 +62,10 @@ int main()
     for (int i = 0; i < 9; i++)
     {
 
+        //This builds the board
         for (int i = 0; i < 3; i++)
         {
+            //These two if statements check if player one wins vertically
             if (grid[i][0] == 'X' && grid[i][1] == 'X' && grid[i][2] == 'X')
             {
                 std::cout << nameOne << " Wins!" << std::endl;
@@ -76,6 +80,7 @@ int main()
                 return 1;
             }
 
+            //These two if statements check if player two wins vertically
             if (grid[i][0] == 'O' && grid[i][1] == 'O' && grid[i][2] == 'O')
             {
                 std::cout << nameTwo << " Wins!" << std::endl;
@@ -91,6 +96,7 @@ int main()
             }
         }
 
+        //These two if statements check if player one wins horizontally
         if (grid[0][0] == 'X' && grid[1][1] == 'X' && grid[2][2] == 'X')
         {
             std::cout << nameOne << " Wins!" << std::endl;
@@ -104,6 +110,7 @@ int main()
             return 1;
         }
 
+        //These two if statements check if player two wins horizontally
         if (grid[0][0] == 'O' && grid[1][1] == 'O' && grid[2][2] == 'X')
         {
             std::cout << nameTwo << " Wins!" << std::endl;
@@ -117,13 +124,15 @@ int main()
             return 1;
         }
 
+        //This is displaying the board on screen
         std::cout << grid[0][0] << "   " << grid[1][0] << "   " << grid[2][0] << std::endl << std::endl;
         std::cout << grid[0][1] << "   " << grid[1][1] << "   " << grid[2][1] << std::endl << std::endl;
         std::cout << grid[0][2] << "   " << grid[1][2] << "   " << grid[2][2] << std::endl;
 
-
+        //This asks for the players input
         std::cout << "Player One, pick a number to set your position!" << std::endl;
 
+        //asks for the position you would like to place your token
         std::cin >> position;
 
         if (i % 2)
@@ -136,58 +145,71 @@ int main()
             playerSymbol = 'X';
         }
 
-        if (position = 'O' || 'X')
+        //Checks if there is a token in the spot the player is placing their token at
+        if (position == 'O' || 'X')
         {
             std::cout << "Pick a new spot!" << std::endl;
         }
 
         std::cout << "Player " << playerSymbol << ", pick a number to set your position!" << std::endl;
 
-        if (position = 'O' || 'X')
+        //Also checks if there is a token in the spot the player is placing their token at
+        if (position == 'O' || 'X')
         {
             std::cout << "Pick a new spot!" << std::endl;
         }
 
+        //These are allthe positions of which the player can place their token going from left to right
+
+        //This is position 1
         if (position == 1)
         {
             grid[0][0] = playerSymbol;
         }
 
+        //This is position 2
         else if (position == 2)
         {
             grid[1][0] = playerSymbol;
         }
 
+        //This is position 3
         else if (position == 3)
         {
             grid[2][0] = playerSymbol;
         }
 
+        //This is position 4
         else if (position == 4)
         {
             grid[0][1] = playerSymbol;
         }
 
+        //This is position 5
         else if (position == 5)
         {
             grid[1][1] = playerSymbol;
         }
 
+        //This is position 6
         else if (position == 6)
         {
             grid[2][1] = playerSymbol;
         }
 
+        //This is position 7
         else if (position == 7)
         {
             grid[0][2] = playerSymbol;
         }
 
+        //This is position 8
         else if (position == 8)
         {
             grid[1][2] = playerSymbol;
         }
 
+        //This is position 9
         else if (position == 9)
         {
             grid[2][2] = playerSymbol;
@@ -195,6 +217,7 @@ int main()
 
     }
 
+    //Displays the grid after player has placed their token
     std::cout << grid[0][0] << "   " << grid[1][0] << "   " << grid[2][0] << std::endl << std::endl;
     std::cout << grid[0][1] << "   " << grid[1][1] << "   " << grid[2][1] << std::endl << std::endl;
     std::cout << grid[0][2] << "   " << grid[1][2] << "   " << grid[2][2] << std::endl;
